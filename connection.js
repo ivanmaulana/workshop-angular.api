@@ -7,8 +7,8 @@ function Connection() {
     this.pool = mysql.createPool({
       host: 'localhost',
       user: 'root',
-      password: '',
-      database: 'iotpln2016'
+      password: 'root',
+      database: 'starter'
     });
   };
 

@@ -1,19 +1,26 @@
 {
-  "name": "ECO Smart Home",
+  "name": "nodejs-starter",
   "version": "1.0.0",
-  "description": "NodeJS Back End for Eco Smart Home",
-  "author": "localhost ilkom ipb",
-  "license": "MIT",
+  "description": "nodejs simple + mysql, mongodb, express, jwt starter",
+  "main": "app.js",
   "dependencies": {
-    "blob-stream": "^0.1.3",
-    "body-parser": "^1.14.1",
-    "express": "^4.13.3",
-    "jsonwebtoken": "^7.1.9",
-    "mysql": "^2.9.0",
-    "socket.io": "^1.5.1"
+    "json-query": "^2.2.0",
+    "jsonwebtoken": "^7.3.0",
+    "mongodb": "^2.2.25",
+    "mongoose": "^4.9.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/agungdp22/backend-eco-smart-home.git"
-  }
+    "url": "git+https://github.com/ivanmaulana/backend-eco-smart-home.git"
+  },
+  "author": "ivanmaulana",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ivanmaulana/backend-eco-smart-home/issues"
+  },
+  "homepage": "https://github.com/ivanmaulana/backend-eco-smart-home#readme"
 }
