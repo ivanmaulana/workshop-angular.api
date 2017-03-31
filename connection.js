@@ -5,10 +5,10 @@ function Connection() {
 
   this.init = function() {
     this.pool = mysql.createPool({
-      host: 'localhost',
-      user: 'root',
-      password: 'root',
-      database: 'starter'
+      host: 'agri.web.id',
+      user: 'agriweb_api',
+      password: 'agriweb_api',
+      database: 'agriweb_api'
     });
   };
 

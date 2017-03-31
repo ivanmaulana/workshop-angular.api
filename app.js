@@ -3,19 +3,16 @@ var express = require('express');
 var bodyparser = require('body-parser');
 var connection = require('./connection');
 var app = express();
-var server = require('http').createServer(app);
-var io = require('./socket/socket-io').listen(server);
-var port = process.env.PORT || 2016;
+var port = 10000;
 
+var todo = require('./models/todo');
+
+connection.init();
 
 // listen port to 2016
-server.listen(port, function () {
+app.listen(port, function () {
   console.log('Server listening at port %d', port);
 });
-
-
-// router dependencies
-var userRoutes = require('./routes/user');
 
 // allow all request
 app.use(function (req, res, next) {
@@ -26,9 +23,7 @@ app.use(function (req, res, next) {
   next();
 });
 
-
 // express public
-app.use(express.static(__dirname + '/public'));
 app.use(bodyparser.urlencoded({extended: true}));
 app.use(bodyparser.json());
 
@@ -37,8 +32,11 @@ app.get('/', function (req, res) {
   res.send('Hello World!');
 });
 
-connection.init();
+app.get('/todo', function(req, res) {
+  todo.get(req, res);
+});
 
+app.post('/todo', function(req, res) {
+  todo.post(req.body, res);
+});
 
-// ROUTES
-userRoutes.configure(app);

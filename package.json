@@ -4,10 +4,13 @@
   "description": "nodejs simple + mysql, mongodb, express, jwt starter",
   "main": "app.js",
   "dependencies": {
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
     "json-query": "^2.2.0",
     "jsonwebtoken": "^7.3.0",
     "mongodb": "^2.2.25",
-    "mongoose": "^4.9.0"
+    "mongoose": "^4.9.0",
+    "mysql": "^2.13.0"
   },
   "devDependencies": {},
   "scripts": {
