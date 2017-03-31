@@ -37,6 +37,7 @@ app.get('/todo', function(req, res) {
 });
 
 app.post('/todo', function(req, res) {
+  // res.send(req.body);
   todo.post(req.body, res);
 });
 
